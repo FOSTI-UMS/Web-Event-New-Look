@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import ghr from '../gh'
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
+          <img src={`${gh}/vercel.svg`} alt="Vercel" className="logo" />
         </a>
       </footer>
 
