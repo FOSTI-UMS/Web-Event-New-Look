@@ -1,8 +1,8 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>Web Event</title>
         <link rel="icon" href="/favicon.ico" />
@@ -14,7 +14,7 @@ export default function Home() {
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Get started by editing <code className="text-pink-500">pages/index.js</code>
         </p>
 
         <div className="grid">
@@ -188,7 +188,8 @@ export default function Home() {
             flex-direction: column;
           }
         }
-      `}</style>
+      `}
+      </style>
 
       <style jsx global>{`
         html,
@@ -203,7 +204,8 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
-      `}</style>
+      `}
+      </style>
     </div>
-  )
+  );
 }
