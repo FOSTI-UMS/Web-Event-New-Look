@@ -8,7 +8,7 @@ export default function AppBar() {
   const [sideMenuIsOpen, setSideMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="bg-white pl-2">
       <div className="container mx-auto">
         <div className="flex justify-between">
           <Link href="/">
