@@ -5,14 +5,14 @@ import AppBar from '../components/AppBar';
 
 export default function withAppBar({ children, pageTitle }) {
   return (
-    <div className="px-3 md:px-6 lg:px-4">
+    <div>
       <Head>
         <title>{pageTitle && `${pageTitle} - `} Forum Open Source Teknik Informatika UMS</title>
       </Head>
 
       <AppBar />
 
-      <div>
+      <div className="px-3 md:px-6 lg:px-4">
         {children}
       </div>
 

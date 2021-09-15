@@ -32,7 +32,7 @@ export default function RecentEvents({ events }) {
       <div className="grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-2 lg:gap-8 lg:grid-cols-3 xl:grid-cols-4">
         {featuredEvents.map((_event) => (
           <div className="flex flex-col mb-2 md:mb-4 lg:mb-8" key={_event.slug}>
-            <figure className="w-full h-96 filter grayscale">
+            <figure className="relative w-full h-96 filter grayscale">
               <Image
                 className="object-cover object-top"
                 layout="fill"
