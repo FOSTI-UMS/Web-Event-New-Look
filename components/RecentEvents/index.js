@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 import Link from 'next/link';
+import Image from 'next/image';
 import { CalendarIcon, ChevronDoubleDownIcon } from '@heroicons/react/outline';
 
 import CONFIG from '../../globals/config';
@@ -31,9 +32,10 @@ export default function RecentEvents({ events }) {
       <div className="grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-2 lg:gap-8 lg:grid-cols-3 xl:grid-cols-4">
         {featuredEvents.map((_event) => (
           <div className="flex flex-col mb-2 md:mb-4 lg:mb-8" key={_event.slug}>
-            <figure className="filter grayscale">
-              <img
-                className="object-cover object-top w-full h-96"
+            <figure className="w-full h-96 filter grayscale">
+              <Image
+                className="object-cover object-top"
+                layout="fill"
                 src={`${CONFIG.BASE_IMAGE_URL}${_event.pamflet}`}
                 alt={_event.nama_event}
               />
