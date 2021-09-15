@@ -1,0 +1,11 @@
+.textBackdrop {
+  @apply absolute -mt-20 -ml-20 font-bold leading-none text-[10rem] text-gray-200 z-[-1] overflow-hidden;
+}
+
+.textBackdrop::after {
+	@apply absolute block top-0 left-0 w-full h-full;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAMAAABFaP0WAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAA5JREFUCNdjYGRgYGQEAAAOAATa5WfvAAAAAElFTkSuQmCC);
+	background-size: 2px 2px;
+	transform: scale(1.5);
+	content: '';
+}

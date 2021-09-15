@@ -10,6 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.4",
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "abort-controller": "^3.0.0",
+    "dayjs": "^1.10.6",
     "next": "^11.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"

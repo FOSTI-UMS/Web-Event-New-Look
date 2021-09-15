@@ -18,6 +18,8 @@ module.exports = {
     'react',
   ],
   rules: {
+    'jsx-a11y/anchor-is-valid': [0],
+    'import/no-extraneous-dependencies': [0],
     'react/react-in-jsx-scope': [0],
     'react/jsx-one-expression-per-line': [0],
     'react/jsx-props-no-spreading': [0],
