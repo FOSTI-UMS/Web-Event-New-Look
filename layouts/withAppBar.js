@@ -16,7 +16,7 @@ export default function withAppBar({ children, pageTitle }) {
         {children}
       </div>
 
-      <footer className="text-center text-gray-600 text-sm py-3 bg-gray-50">
+      <footer className="text-center text-gray-600 text-xs py-3 bg-gray-50 md:text-md">
         <div className="container mx-auto">
           Copyright &copy; {new Date().getFullYear()} | <a href="https://fostiums.org">FOSTI UMS</a> | All Rights Reserved.
         </div>

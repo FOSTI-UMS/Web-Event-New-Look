@@ -19,8 +19,8 @@ export default function RecentEvents({ events }) {
   }, [currentPage]);
 
   return (
-    <div className="container mx-auto mt-20 mb-10">
-      <div className="relative my-8 overflow-hidden md:static">
+    <div className="container mx-auto my-10 md:mt-16 lg:mt-20">
+      <div className="relative mb-4 overflow-hidden md:static md:mb-6 lg:mb-8">
         <h3 className="inline-block pb-3 pr-16 mb-5 text-red-500 font-bold text-xl border-b-4 border-red-500">
           Recent Events
         </h3>
