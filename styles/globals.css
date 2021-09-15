@@ -1,3 +1,11 @@
 body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
+
+#nprogress .bar {
+  @apply bg-red-500;
+}
+
+#nprogress .spinner-icon {
+  @apply border-red-500 border-b-0 border-r-0;
+}
