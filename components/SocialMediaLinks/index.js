@@ -23,7 +23,7 @@ const socials = [
 
 export default function SocialMediaLinks() {
   return (
-    <div className="grid grid-cols-2 gap-2 md:block md:space-x-6">
+    <div className="grid grid-cols-2 gap-3 md:block md:space-x-6 lg:space-x-8">
       {socials.map(({ image, label, link }) => (
         <a href={link} className="inline-flex items-center" target="_blank" rel="noreferrer" key={link}>
           <img className="w-4 h-4" src={image} alt="" />
