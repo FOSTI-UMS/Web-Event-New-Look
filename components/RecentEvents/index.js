@@ -21,7 +21,7 @@ export default function RecentEvents({ events }) {
   return (
     <div className="container mx-auto my-10 md:mt-16 lg:mt-20">
       <div className="relative mb-4 overflow-hidden md:static md:mb-6 lg:mb-8">
-        <h3 className="inline-block pb-3 pr-16 mb-5 text-red-500 font-bold text-xl border-b-4 border-red-500">
+        <h3 className="inline-block pb-3 pr-12 mb-5 text-red-400 font-bold text-xl tracking-wider border-b-4 border-red-400">
           Recent Events
         </h3>
         <div className={styles.textBackdrop}>
@@ -65,7 +65,7 @@ export default function RecentEvents({ events }) {
           <button
             type="button"
             onClick={() => setCurrentPage(currentPage + 1)}
-            className="relative bg-white border-2 border-red-500 text-red-500 rounded-full w-40 h-20 overflow-hidden group"
+            className="relative bg-white border-2 border-red-400 text-red-400 rounded-full w-40 h-20 overflow-hidden group"
           >
             <span className="relative top-0 opacity-100 transition-all group-hover:-top-1/2 group-hover:opacity-0">
               Load More
