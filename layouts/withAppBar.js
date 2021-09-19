@@ -5,7 +5,7 @@ import AppBar from '../components/AppBar';
 
 export default function withAppBar({ children, pageTitle }) {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Head>
         <title>{pageTitle && `${pageTitle} - `} Forum Open Source Teknik Informatika UMS</title>
       </Head>
@@ -16,7 +16,7 @@ export default function withAppBar({ children, pageTitle }) {
         {children}
       </div>
 
-      <footer className="text-center text-gray-600 text-xs py-3 bg-gray-50 md:text-sm">
+      <footer className="mt-auto text-center text-gray-600 text-xs py-3 bg-gray-50 md:text-sm">
         <div className="container mx-auto">
           Copyright &copy; {new Date().getFullYear()} | <a href="https://fostiums.org">FOSTI UMS</a> | All Rights Reserved.
         </div>
