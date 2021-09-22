@@ -4,6 +4,7 @@ import Router from 'next/router';
 import Head from 'next/head';
 import NProgress from 'nprogress';
 
+import 'react-toastify/dist/ReactToastify.css';
 import 'nprogress/nprogress.css';
 import '../styles/tailwind.css';
 import '../styles/globals.css';

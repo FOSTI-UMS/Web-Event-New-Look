@@ -9,3 +9,35 @@ body {
 #nprogress .spinner-icon {
   @apply border-red-500 border-b-0 border-r-0;
 }
+
+.Toastify__toast-container {
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.Toastify__toast {
+  margin: 1rem;
+}
+
+.Toastify__toast--success {
+  border-color: var(--toastify-icon-color-success);
+}
+
+.Toastify__toast--error {
+  border-color: var(--toastify-icon-color-error);
+}
+
+.Toastify__toast-body {
+  flex-direction: column;
+  align-items: start;
+}
+
+.Toastify__toast-icon {
+  position: absolute;
+  margin-top: -1.5rem;
+  width: 70px;
+  transform: rotate(45deg);
+  opacity: 0.07;
+}
