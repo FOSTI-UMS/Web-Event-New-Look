@@ -147,7 +147,7 @@ export async function getStaticPaths() {
     params: { slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps({ params }) {
