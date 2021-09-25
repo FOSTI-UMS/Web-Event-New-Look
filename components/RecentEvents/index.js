@@ -20,8 +20,8 @@ export default function RecentEvents({ events }) {
 
   return (
     <div className="container mx-auto my-10 md:mt-16 lg:mt-20">
-      <div className="relative mb-4 overflow-hidden md:static md:mb-6 lg:mb-8">
-        <h3 className="inline-block pb-3 pr-12 mb-5 text-red-400 font-bold text-xl tracking-wider border-b-4 border-red-400">
+      <div className="relative mb-4 overflow-hidden md:static md:mb-6">
+        <h3 className="inline-block py-2 px-5 mb-5 text-red-400 font-medium md:text-lg tracking-wider text-white bg-red-500 rounded-full">
           Recent Events
         </h3>
         <div className={styles.textBackdrop}>

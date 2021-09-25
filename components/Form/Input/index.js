@@ -14,7 +14,7 @@ export default function Input({
         <input
           {...inputProps}
           id={id}
-          className="peer block text-sm w-full p-3 pt-5 pb-2 border-b border-gray-400 bg-gray-50 focus:outline-none focus:border-red-500"
+          className="peer block text-sm w-full p-3 pt-5 pb-2 border-b border-gray-400 bg-gray-100 focus:outline-none focus:border-red-500"
           onInput={(ev) => onChange(ev.target.value)}
           onBlur={(ev) => onBlur(ev.target.value)}
           autoComplete="off"

@@ -59,11 +59,11 @@ export default function Event({ event }) {
           </div>
 
           <div className="md:col-span-5 max-w-2xl">
-            <h2 className="mt-6 text-3xl font-bold leading-normal h-24 md:text-white md:mt-0">
+            <h2 className="mt-6 text-2xl font-bold leading-normal md:text-3xl md:h-24 md:text-white md:mt-0">
               {nama_event}
             </h2>
 
-            <div className="mt-2 space-y-6 md:mt-6">
+            <div className="mt-2 space-y-5 md:mt-6">
               <div>
                 <div className="font-medium text-gray-700">Description</div>
                 <p className="mt-2 text-gray-500 leading-relaxed">{deskripsi}</p>
@@ -73,7 +73,7 @@ export default function Event({ event }) {
                 {htm || 'Free Registration'}
               </div>
 
-              <div className="grid grid-cols-2">
+              <div className="grid grid-cols-2 gap-6">
                 <div>
                   <div className="flex items-center">
                     <CalendarIcon className="w-4 h-4 mr-2 text-red-400" />

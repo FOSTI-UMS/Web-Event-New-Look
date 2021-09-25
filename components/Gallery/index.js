@@ -9,7 +9,7 @@ const images = [
 
 export default function Gallery() {
   return (
-    <div className="grid grid-cols-2 gap-2 md:gap-4 md:grid-cols-4 lg:-mx-4">
+    <div className="grid grid-cols-4 gap-2 md:gap-3 lg:-mx-4">
       {images.map((image) => (
         <div className="relative w-full h-[200px] overflow-hidden md:h-[250px] lg:h-[300px]" key={image}>
           <Image

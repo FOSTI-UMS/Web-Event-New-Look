@@ -8,7 +8,7 @@ export default function AppBar() {
   const [sideMenuIsOpen, setSideMenuOpen] = useState(false);
 
   return (
-    <header className="absolute left-0 right-0 pl-2 z-10">
+    <header className="absolute left-0 right-0 px-3 z-10">
       <div className="container mx-auto">
         <div className="flex justify-between">
           <Link href="/">
@@ -17,7 +17,7 @@ export default function AppBar() {
             </a>
           </Link>
 
-          <div className="bg-black flex">
+          <div className="flex items-center">
             <HamburgerButton handleClick={() => setSideMenuOpen(true)} />
           </div>
         </div>
