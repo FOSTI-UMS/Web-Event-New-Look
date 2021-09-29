@@ -16,7 +16,7 @@ export default function Input({
       {labelText && (
         <label
           htmlFor={id}
-          className="inline-block mb-2 text-sm text-gray-400 cursor-text select-none transition-all peer-valid:mt-0.5 peer-valid:text-[10px] peer-focus:mt-0.5 peer-focus:text-[10px] peer-focus:text-red-500"
+          className="inline-block mb-2 text-sm text-gray-400 cursor-text select-none transition-all peer-valid:mt-0.5 peer-valid:text-[10px] peer-focus:mt-0.5 peer-focus:text-[10px] peer-focus:text-red-500 md:text-gray-400"
         >
           {labelText}
         </label>

@@ -10,11 +10,13 @@ import Request from '../utils/api-request';
 import API_ENDPOINT from '../globals/api-endpoint';
 
 export default function Homepage({ upcomingEvents, recentEvents }) {
+  const noUpcomingEvents = upcomingEvents <= 0;
+
   return (
     <div>
       <Hero />
       <UpcomingEvents events={upcomingEvents} />
-      <Gallery />
+      {noUpcomingEvents && <Gallery />}
       <RecentEvents events={recentEvents} />
     </div>
   );

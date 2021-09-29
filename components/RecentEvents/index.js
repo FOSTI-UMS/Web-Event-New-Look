@@ -48,11 +48,11 @@ export default function RecentEvents({ events }) {
                       <h2 className="font-semibold text-xl line-clamp-2 md:min-h-[3.5rem]">{_event.nama_event}</h2>
                     </a>
                   </Link>
-                  <div className="flex items-center mt-3 text-sm text-gray-400">
+                  <div className="flex items-center mt-2.5 text-sm text-gray-400">
                     <CalendarIcon className="w-4 h-4 mr-2" />
                     {dayjs(_event.waktu).format('DD MMMM YYYY HH:mm')}
                   </div>
-                  <p className="line-clamp-3 mt-4 leading-relaxed text-gray-500">{_event.deskripsi}</p>
+                  <p className="line-clamp-3 mt-3 leading-relaxed text-gray-500">{_event.deskripsi}</p>
                 </div>
               </div>
             </div>

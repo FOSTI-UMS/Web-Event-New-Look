@@ -57,7 +57,7 @@ export default function UpcomingEvents({ events }) {
                   </div>
                 </div>
                 <Link href={_event.slug}>
-                  <a className="border-2 border-red-500 text-red-500 py-3 px-5 uppercase font-medium hover:text-white hover:bg-red-500 transition-colors">
+                  <a className="inline-block border-2 border-red-500 text-red-500 py-3 px-5 rounded uppercase font-medium hover:text-white hover:bg-red-500 transition-colors">
                     Join Event
                   </a>
                 </Link>
