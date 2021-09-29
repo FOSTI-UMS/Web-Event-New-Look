@@ -11,33 +11,29 @@ body {
 }
 
 .Toastify__toast-container {
-  top: 0;
-  right: 0;
-  width: 100%;
-  max-width: 500px;
+  @apply w-full top-0 right-0 max-w-[500px];
 }
 
 .Toastify__toast {
-  margin: 1rem;
+  @apply m-4 py-4 text-white;  
 }
 
 .Toastify__toast--success {
-  border-color: var(--toastify-icon-color-success);
+  @apply bg-green-500;
 }
 
 .Toastify__toast--error {
-  border-color: var(--toastify-icon-color-error);
+  @apply bg-red-500;
+}
+
+.Toastify__progress-bar {
+  @apply bg-white;
 }
 
 .Toastify__toast-body {
-  flex-direction: column;
-  align-items: start;
+  @apply items-start;
 }
 
 .Toastify__toast-icon {
-  position: absolute;
-  margin-top: -1.5rem;
-  width: 70px;
-  transform: rotate(45deg);
-  opacity: 0.07;
+  @apply mt-1 mr-4 w-10 opacity-50;
 }

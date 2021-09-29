@@ -65,11 +65,11 @@ export default function Event({ event }) {
 
             <div className="mt-2 space-y-5 md:mt-6">
               <div>
-                <div className="font-medium text-gray-700">Description</div>
-                <p className="mt-2 text-sm text-gray-400 leading-relaxed md:text-base">{deskripsi}</p>
+                <div className="mt-5 font-medium text-gray-700">Description</div>
+                <p className="mt-2 text-sm text-gray-400 leading-relaxed md:text-base md:leading-relaxed">{deskripsi}</p>
               </div>
 
-              <div className="bg-gradient-to-r from-red-50 py-2 px-4 text-red-400 text-lg font-medium rounded border-l-2 border-red-500">
+              <div className="bg-gradient-to-r from-red-50 py-2.5 px-4 text-red-400 text-lg font-medium rounded border-l-2 border-red-500">
                 {htm || 'Free Registration'}
               </div>
 

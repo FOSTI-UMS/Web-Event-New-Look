@@ -60,6 +60,7 @@ const Form = ({
     setFormLevelErrorMessage(null);
 
     if (useCaptcha) {
+      recaptchaRef?.current?.reset();
       onHideRecaptcha(() => setIsLoading(false));
       await recaptchaRef.current.executeAsync();
     }
@@ -85,7 +86,6 @@ const Form = ({
         toast.error(ToastMessage);
       }
     } finally {
-      recaptchaRef?.current?.reset();
       setIsLoading(false);
     }
   };
@@ -95,7 +95,7 @@ const Form = ({
       <ToastContainer pauseOnFocusLoss={false} />
 
       {formLevelErrorMessage && (
-        <div className="py-3 px-5 border-b-2 border-red-500 bg-red-50 text-red-500 rounded">
+        <div className="py-4 px-5 border-b-2 border-red-500 bg-red-50 text-sm text-red-500 rounded">
           {formLevelErrorMessage}
         </div>
       )}
