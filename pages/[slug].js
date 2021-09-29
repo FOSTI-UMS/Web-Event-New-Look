@@ -59,17 +59,17 @@ export default function Event({ event }) {
           </div>
 
           <div className="md:col-span-5 max-w-2xl">
-            <h2 className="mt-6 text-2xl font-bold leading-normal md:text-3xl md:h-24 md:text-white md:mt-0">
+            <h2 className="mt-6 text-xl font-bold leading-normal md:text-2xl md:leading-relaxed md:h-24 md:text-white md:mt-0 lg:text-3xl lg:leading-relaxed">
               {nama_event}
             </h2>
 
             <div className="mt-2 space-y-5 md:mt-6">
               <div>
                 <div className="font-medium text-gray-700">Description</div>
-                <p className="mt-2 text-gray-500 leading-relaxed">{deskripsi}</p>
+                <p className="mt-2 text-sm text-gray-400 leading-relaxed md:text-base">{deskripsi}</p>
               </div>
 
-              <div className="bg-red-50 py-3 px-4 text-red-400 text-xl font-medium rounded border-l-2 border-red-500">
+              <div className="bg-gradient-to-r from-red-50 py-2 px-4 text-red-400 text-lg font-medium rounded border-l-2 border-red-500">
                 {htm || 'Free Registration'}
               </div>
 
@@ -79,7 +79,7 @@ export default function Event({ event }) {
                     <CalendarIcon className="w-4 h-4 mr-2 text-red-400" />
                     <span className="font-medium text-gray-700">When</span>
                   </div>
-                  <div className="mt-2 text-gray-500 space-y-1">
+                  <div className="mt-2 text-sm text-gray-400 space-y-1 md:text-base">
                     <div>{dayjs(waktu).format('dddd, DD MMM YYYY')}</div>
                     <div>{dayjs(waktu).format('HH:mm')} WIB</div>
                   </div>
@@ -89,7 +89,7 @@ export default function Event({ event }) {
                     <LocationMarkerIcon className="w-4 h-4 mr-2 text-red-400" />
                     <span className="font-medium text-gray-700">Where</span>
                   </div>
-                  <div className="mt-2 text-gray-500">{tempat}</div>
+                  <div className="mt-2 text-sm text-gray-400 md:text-base">{tempat}</div>
                 </div>
               </div>
 
@@ -98,7 +98,7 @@ export default function Event({ event }) {
                   <PhoneIcon className="w-4 h-4 mr-2 text-red-400" />
                   <span className="font-medium text-gray-700">Contact Person</span>
                 </div>
-                <div className="mt-2 text-gray-500">{cp}</div>
+                <div className="mt-2 text-sm text-gray-400 md:text-base">{cp}</div>
               </div>
 
               <div className="border-t border-gray-200" />

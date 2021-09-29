@@ -20,7 +20,7 @@ export default function RecentEvents({ events }) {
 
   return (
     <div className="container mx-auto my-10 md:mt-16 lg:mt-20">
-      <div className="relative mb-4 overflow-hidden md:static md:mb-6">
+      <div className="relative overflow-hidden md:static md:mb-3">
         <h3 className="inline-block py-2 px-5 mb-5 text-red-400 font-medium md:text-lg tracking-wider text-white bg-red-500 rounded-full">
           Recent Events
         </h3>
@@ -48,11 +48,11 @@ export default function RecentEvents({ events }) {
                       <h2 className="font-semibold text-xl line-clamp-2 md:min-h-[3.5rem]">{_event.nama_event}</h2>
                     </a>
                   </Link>
-                  <div className="flex items-center mt-3 text-sm text-gray-500">
+                  <div className="flex items-center mt-3 text-sm text-gray-400">
                     <CalendarIcon className="w-4 h-4 mr-2" />
                     {dayjs(_event.waktu).format('DD MMMM YYYY HH:mm')}
                   </div>
-                  <p className="line-clamp-3 mt-4 leading-relaxed text-gray-600">{_event.deskripsi}</p>
+                  <p className="line-clamp-3 mt-4 leading-relaxed text-gray-500">{_event.deskripsi}</p>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function RecentEvents({ events }) {
           <button
             type="button"
             onClick={() => setCurrentPage(currentPage + 1)}
-            className="relative bg-white border-2 border-red-400 text-red-400 rounded-full w-40 h-20 overflow-hidden group"
+            className="relative bg-white border-2 border-red-400 text-red-400 rounded-full w-40 h-16 overflow-hidden group md:h-20"
           >
             <span className="relative top-0 opacity-100 transition-all group-hover:-top-1/2 group-hover:opacity-0">
               Load More
