@@ -50,6 +50,11 @@ export default function Event({ event }) {
           description: deskripsi,
           images: [{ url: IMG_THUMBNAIL }],
         }}
+        twitter={{
+          handle: '@fostiums',
+          site: '@fostiums',
+          cardType: 'summary_large_image',
+        }}
       />
 
       <div
