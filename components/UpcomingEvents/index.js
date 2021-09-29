@@ -36,7 +36,7 @@ export default function UpcomingEvents({ events }) {
                   src={`${CONFIG.BASE_IMAGE_URL}${_event.pamflet}`}
                   alt=""
                 />
-                <div className="text-2xl md:text-3xl font-bold leading-relaxed">{_event.nama_event}</div>
+                <h2 className="text-xl md:text-3xl font-bold leading-relaxed">{_event.nama_event}</h2>
                 <p className="mt-5 leading-loose">{_event.deskripsi}</p>
                 <div className="my-12 space-y-5">
                   <div className="flex items-center">
