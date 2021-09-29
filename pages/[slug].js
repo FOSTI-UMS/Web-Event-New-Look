@@ -45,6 +45,7 @@ export default function Event({ event }) {
         title={pageTitle}
         description={deskripsi}
         openGraph={{
+          type: 'website',
           title: pageTitle,
           description: deskripsi,
           images: [{ url: IMG_THUMBNAIL }],
