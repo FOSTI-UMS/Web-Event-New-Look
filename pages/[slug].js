@@ -1,8 +1,8 @@
 /* eslint-disable camelcase */
-import Head from 'next/head';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 import omit from 'lodash.omit';
+import { NextSeo } from 'next-seo';
 import { CalendarIcon, LocationMarkerIcon, PhoneIcon } from '@heroicons/react/outline';
 
 import withAppBar from '../layouts/withAppBar';
@@ -19,6 +19,7 @@ export default function Event({ event }) {
     nama_event, waktu, penutupan, tempat, pamflet, deskripsi, htm, cp, slug, is_full: isFull,
   } = event;
 
+  const pageTitle = `${nama_event} - FOSTI UMS`;
   const now = new Date().getTime();
   const eventIsEnded = now > (new Date(penutupan).getTime() || new Date(waktu).getTime());
 
@@ -40,10 +41,15 @@ export default function Event({ event }) {
 
   return (
     <div className="pb-10">
-      <Head>
-        <title>{nama_event} - FOSTI UMS</title>
-        <meta name="description" content={deskripsi} />
-      </Head>
+      <NextSeo
+        title={pageTitle}
+        description={deskripsi}
+        openGraph={{
+          title: pageTitle,
+          description: deskripsi,
+          images: [{ url: IMG_THUMBNAIL }],
+        }}
+      />
 
       <div
         className="relative h-[280px] -mx-4 overflow-hidden before:absolute before:inset-0 before:bg-[#0000005e] before:z-[1]"
