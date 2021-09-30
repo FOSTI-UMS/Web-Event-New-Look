@@ -60,7 +60,6 @@ const Form = ({
     setFormLevelErrorMessage(null);
 
     if (useCaptcha) {
-      recaptchaRef?.current?.reset();
       onHideRecaptcha(() => setIsLoading(false));
       await recaptchaRef.current.executeAsync();
     }
@@ -86,6 +85,7 @@ const Form = ({
         toast.error(ToastMessage);
       }
     } finally {
+      recaptchaRef?.current?.reset();
       setIsLoading(false);
     }
   };
