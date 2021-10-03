@@ -19,7 +19,7 @@ const ToastFieldErrorMessage = (
 const ToastServerErrorMessage = (
   <div>
     Terjadi masalah pada server, silahkan coba beberapa saat lagi atau kontak
-    <b>fostiums@gmail.com</b>.
+    &nbsp;<b>fostiums@gmail.com</b>.
   </div>
 );
 
@@ -50,6 +50,7 @@ const Form = ({
 
   const onFormSubmit = async (ev) => {
     ev.preventDefault();
+    const finalValues = { ...values };
 
     if (!checkIfAllFieldsAreValid()) {
       toast.error(ToastFieldErrorMessage);
@@ -61,11 +62,12 @@ const Form = ({
 
     if (useCaptcha) {
       onHideRecaptcha(() => setIsLoading(false));
-      await recaptchaRef.current.executeAsync();
+      const token = await recaptchaRef.current.executeAsync();
+      finalValues['g-recaptcha-response'] = token;
     }
 
     try {
-      await onSubmit(values);
+      await onSubmit(finalValues);
       formRef.current.reset();
 
       if (onSuccessMessage) {
@@ -92,7 +94,7 @@ const Form = ({
 
   return (
     <form ref={formRef} onSubmit={onFormSubmit} className="space-y-5">
-      <ToastContainer pauseOnFocusLoss={false} />
+      <ToastContainer pauseOnFocusLoss={false} autoClose={15000} />
 
       {formLevelErrorMessage && (
         <div className="py-4 px-5 border-b-2 border-red-500 bg-red-50 text-sm text-red-500 rounded">
@@ -112,15 +114,7 @@ const Form = ({
         />
       ))}
 
-      {useCaptcha && (
-        <Recaptcha
-          ref={recaptchaRef}
-          onChange={(token) => setFieldValue({
-            name: 'g-recaptcha-response',
-            value: token,
-          })}
-        />
-      )}
+      {useCaptcha && <Recaptcha ref={recaptchaRef} />}
 
       <Button isLoading={isLoading}>
         {submitLabel}
