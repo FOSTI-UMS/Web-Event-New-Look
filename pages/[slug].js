@@ -64,7 +64,7 @@ export default function Event({ event }) {
         <img className="w-full blur-[100px]" src={IMG_THUMBNAIL} alt="" />
       </div>
 
-      <div className="relative container mx-auto -mt-28 pt-2 z-10">
+      <div className="relative container mx-auto -mt-28 pt-2 z-50">
         <div className="md:grid md:grid-cols-8 md:gap-12">
           <div className="md:col-span-3">
             <img className="rounded-xl" src={IMG_THUMBNAIL} alt={nama_event} />
