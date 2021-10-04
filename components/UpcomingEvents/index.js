@@ -18,7 +18,7 @@ export default function UpcomingEvents({ events }) {
     <div className="container mx-auto mb-16">
       <div className={styles.innerWrapper}>
         {events.map((_event) => (
-          <div className="md:grid md:grid-cols-8 md:gap-16">
+          <div className="md:grid md:grid-cols-8 md:gap-16" key={_event.id}>
             <div className="hidden md:block md:col-span-3">
               <img
                 className="w-full rounded-xl overflow-hidden"
