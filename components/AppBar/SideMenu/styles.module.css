@@ -1,0 +1,9 @@
+.sideMenu {
+  @apply fixed top-0 max-w-sm h-full py-8 px-12 bg-black invisible overflow-y-auto z-50;
+  right: -24rem;
+  transition: all .6s cubic-bezier(.77,0,.175,1);
+}
+
+.isOpen {
+  @apply right-0 visible;
+}
